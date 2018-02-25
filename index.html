@@ -19,7 +19,7 @@ title: Home
   <div style="background-image: url({{ event.image }})" class="event__card">
     {% capture this_year %}{{ event.date | date: '%B %d, %Y' }}{% endcapture %}
     <p class="event__date">{{ this_year }}</p>
-    <h2 class="event__title"> <a href="{{ site.baseurl }}/{{ event.url }}" class="event__link">{{ event.title }}</a> </h2>
+    <h2 class="event__title"> <a href="{{ site.baseurl }}{{ event.url }}" class="event__link">{{ event.title }}</a> </h2>
   </div>
   {% endfor %}
 </section>
