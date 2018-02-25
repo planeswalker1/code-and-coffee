@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section class="media">
+  <div class="media__cards">1</div>
+  <div class="media__cards">2</div>
+  <div class="media__cards">3</div>
+  <div class="media__cards">4</div>
+  <div class="media__cards">5</div>
+  <div class="media__cards">6</div>
+</section>
+
+<section class="event">
+  {% assign sorted = site.events | sort: 'date' | reverse %}
+
+  {% for event in sorted %}
+  <div style="background-image: url({{ event.image }})" class="event__card">
+    {% capture this_year %}{{ event.date | date: '%B %d, %Y' }}{% endcapture %}
+    <p class="event__date">{{ this_year }}</p>
+    <h2 class="event__title"> <a href="{{ event.url }}" class="event__link">{{ event.title }}</a> </h2>
+  </div>
+  {% endfor %}
+</section>
