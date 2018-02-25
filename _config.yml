@@ -1,4 +1,4 @@
-baseurl: ''
+baseurl: '/code-and-coffee'
 
 collections:
   events:
