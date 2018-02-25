@@ -1,4 +1,5 @@
 baseurl: '/code-and-coffee'
+title: 'Code and Coffee'
 
 collections:
   events:
